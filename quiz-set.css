@@ -1,0 +1,511 @@
+
+
+.quiz-sets {
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    min-height: 80vh;
+    width: 100%;
+    background: url("image/homepage-bg.png");
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.tagline-quiz-set{
+    margin-top: -5px;
+}
+.sets-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 42px;
+
+
+    width: 100%;
+    padding: 64px;
+}
+
+.set-card{
+    width: 100%;
+    height: 280px;
+
+    position: relative;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+
+    padding: 32px;
+    
+}
+
+.set-card:hover{
+    cursor: pointer;
+}
+
+.set-card:hover .model{
+    transform: scale(1.1);
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+}
+
+.set-card.easy{
+    background: url("./image/quiz-set-assets/easy.png");
+    object-fit: cover;
+}
+
+.set-card.medium{
+    background: url("./image/quiz-set-assets/medium.png");
+    object-fit: cover;
+}
+
+
+.set-card.hard{
+    background: url("./image/quiz-set-assets/hard.png");
+    object-fit: cover;
+}
+
+
+.set-card.extreme{
+    background: url("./image/quiz-set-assets/extreme.png");
+    object-fit: cover;
+}
+
+
+.outline{
+    width: 96%;
+    height: 90%;
+    border: 3px solid white;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.set-details-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    margin-bottom: auto;
+}
+
+.level-section, .questions-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: white;
+    border-radius: 8px;
+
+    padding: 4px 16px;
+
+}
+
+.star-img, .question-img{
+    height: 14px;
+    object-fit: cover;
+}
+
+.level, .question{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.sub-tagline{
+    color: white;
+}
+
+.model-easy{
+    position: absolute;
+    right: -8%;
+    bottom: 0;
+    width: 350px;
+}
+
+.model-medium{
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    width: 250px;
+}
+
+.model-hard{
+    position: absolute;
+    right: -8%;
+    bottom: -3%;
+    width: 360px;
+}
+
+.model-extreme{
+    position: absolute;
+    right: -8%;
+    bottom: 0;
+    width: 360px;
+}
+
+.set-title-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.okay{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: white;
+}
+
+.nato{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    color: white;
+    margin-top: -32px;
+    margin-left: 72px;
+}
+
+
+.jusko{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: white;
+}
+
+.juskopoh{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 54px;
+    color: white;
+    margin-top: -32px;
+    margin-left: 46px;
+}
+
+
+
+.mgakapuso{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    margin-right: auto;
+}
+
+.uuwi{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: white;
+    margin-top: -24px;
+    margin-left: 32px;
+}
+
+.napoako{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: white;
+    margin-top: -24px;
+    margin-left: 64px;
+}
+
+
+.bossing{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    margin-right: auto;
+}
+
+.kupal{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: white;
+    margin-top: -24px;
+    margin-left: 32px;
+}
+
+.kaba{
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: white;
+    margin-top: -24px;
+    margin-left: 128px;
+}
+
+
+
+
+
+.set-tagline{
+    margin-bottom: 16px;
+}
+
+.sub-tagline.easy{
+    margin-left: 16px;
+}
+
+.sub-tagline.medium{
+    margin-left: 16px;
+}
+
+.sub-tagline.hard{
+    margin-left: 24px;
+}
+
+
+.play-button{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+
+    color: white;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    border-radius: 12px;
+    border: 1px solid white;
+    opacity: 0;
+
+    background: linear-gradient();
+
+    padding: 8px 32px;
+}
+
+.set-card:hover .play-button{
+    transform: translateX(32px);
+    opacity: 1;
+    transition: all 0.3s ease;
+    padding: 8px 32px;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .sets-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 42px;
+    
+        width: 100%;
+        padding: 64px;
+    }
+
+    .model-easy{
+        position: absolute;
+        right: -8%;
+        bottom: 0;
+        width: 350px;
+    }
+    
+    .model-medium{
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+        width: 250px;
+    }
+    
+    .model-hard{
+        position: absolute;
+        right: -8%;
+        bottom: -3%;
+        width: 350px;
+    }
+    
+    .model-extreme{
+        position: absolute;
+        right: -8%;
+        bottom: 0;
+        width: 350px;
+    }
+    
+}
+
+
+
+@media (max-width: 800px) {
+    .sets-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 42px;
+    
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tagline-quiz-set{
+        text-align: center;
+        font-size: 24px;
+        margin-top: 16px;
+    }
+    .text-blue-gradient h1{
+        font-size: 2rem !important;
+    }
+
+    .set-card{
+        overflow: hidden;
+    }
+
+    .model-easy{
+        position: absolute;
+        right: -12%;
+        bottom: 0;
+        width: 220px;
+    }
+    
+    .model-medium{
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+        width: 140px;
+    }
+    
+    .model-hard{
+        position: absolute;
+        right: -8%;
+        bottom: -3%;
+        width: 220px;
+    }
+    
+    .model-extreme{
+        position: absolute;
+        right: -8%;
+        bottom: 0;
+        width: 220px;
+    }
+
+
+
+    .okay{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        color: white;
+    }
+    
+    .nato{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 42px;
+        color: white;
+        margin-top: -16px;
+        margin-left: 40px;
+    }
+    
+    
+    .jusko{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        color: white;
+    }
+    
+    .juskopoh{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        color: white;
+        margin-top: -16px;
+        margin-left: 40px;
+    }
+    
+    
+    
+    .mgakapuso{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        color: white;
+        margin-right: auto;
+    }
+    
+    .uuwi{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 64px;
+        color: white;
+        margin-top: -16px;
+        margin-left: 32px;
+    }
+    
+    .napoako{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        color: white;
+        margin-top: -18px;
+        margin-left: 64px;
+    }
+    
+    
+    .bossing{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+        color: white;
+        margin-right: auto;
+    }
+    
+    .kupal{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 55px;
+        color: white;
+        margin-top: -16px;
+        margin-left: 5px;
+    }
+    
+    .kaba{
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        color: white;
+        margin-top: -18px;
+        margin-left: 100px;
+    }
+    
+    .set-tagline{
+        margin-bottom: 32px;
+        
+    }
+
+    .sub-tagline{
+        width: 80%;
+        font-size: 12px;
+    }
+    
+    .sub-tagline.easy{
+        width: 80%;
+        margin-left: 10px;
+    }
+    
+    .sub-tagline.medium{
+        margin-left: 10px;
+    }
+    
+    .sub-tagline.hard{
+        margin-left: 10px;
+    }
+
+
+
+}

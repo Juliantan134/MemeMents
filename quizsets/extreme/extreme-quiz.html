@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeMents - Hard</title>
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="../../globalstyles.css" rel="stylesheet">
+    <link href="../quiz-style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="page-container">
+        <nav class="navbar">
+            <a href="../../index.html"><p class="logo-text">MemeMents</p></a>
+            
+            <div class="quiz-controls">
+                <div class="score-section">
+                    <p id="score" class="score-text text-blue-gradient">400</p>
+                    <img class="star-img" src="../../images/icons/star.png">
+                </div>
+                <div class="reset-section">
+                    <p class="reset-text text-blue-gradient">RESET</p>
+                    <img class="reset-img" src="../../images/icons/reset.png">
+                </div>
+                <div class="pause-section">
+                    <p class="pause-text text-blue-gradient">PAUSE</p>
+                    <img class="pause-img" src="../../images/icons/star.png">
+                </div>
+            </div>
+        </nav>
+
+        <div class="question-container">
+            <img class="question-img" src="../../images/icons/question.png">
+
+            <div class="timer-container">
+                <div class="timer-controls">
+                    <div id="timer-bar" class="timer-bar"></div>
+                    <div class="timer-overlay"></div>
+                </div>
+            </div>
+
+            <div class="question-details">
+                <div class="question-header blue-gradient">ANG TANONG</div>
+                <p id="question-text" class="question-text">Anong pak ang mataas tumalon? Anong pak ang mataas tumalon...</p>
+            </div>            
+
+        </div>
+
+        <div class="lower-part">
+            <div class="options-container">
+                <div id="opt-a" class="option">
+                    <div class="opt-circle blue-gradient">A</div>
+                    <p id="opt-a-value" class="opt-text">Edi Tipaklong</p>
+                </div>
+
+                <div id="opt-b" class="option">
+                    <div class="opt-circle green-gradient">B</div>
+                    <p id="opt-b-value" class="opt-text">Edi Tipaklong</p>
+                </div>
+
+                <div id="opt-c" class="option">
+                    <div class="opt-circle orange-gradient">C</div>
+                    <p id="opt-c-value" class="opt-text">Edi Tipaklong</p>
+                </div>
+
+                <div id="opt-d" class="option">
+                    <div class="opt-circle red-gradient">D</div>
+                    <p id="opt-d-value" class="opt-text">Edi Tipaklong</p>
+                </div>
+
+
+            </div>
+    
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar">
+                    <p id="progress-value" class="progress-value">50%</p>
+                    <div class="progress-circle"></div>
+                </div>
+    
+                <div class="progress-overlay"></div>
+            </div>
+
+
+        </div>
+
+        <div class="meme-image-section">
+            <div class="meme-image-container">
+                <img class="meme-image" id="meme-image" src="../../images/quiz-assets/meme-img-easy/1.jpg">
+            </div>
+        </div>
+
+        <div id="checking-modal" class="checking-modal">
+            <div class="checking-container">
+                <img id="checking-icon" class="checking-icon" src="../../images/icons/check.png">
+                <h3 id="checking-tagline" class="checking-tagline">Slayable ka sis!</h3>
+                <p id="checking-trivia" class="checking-trivia">Ano ang pak na mataas tumalon? Edi TiPAKlong!</p>
+                <div id="next-button" class="next-button blue-gradient">NEXT QUESTION</div>
+            </div>
+        </div>
+
+    </section>
+    
+    <section id="evaluation-container" class="evaluation-container">
+        <nav class="navbar">
+            <p class="logo-text">MemeMents</p>
+            <div class="eval-controls">
+                <div class="reset-section">
+                    <p class="reset-text text-blue-gradient">RESET</p>
+                    <img class="reset-img" src="../../images/icons/reset.png">
+                </div>
+                <a href="../../quizsets.html">
+                <div class="quit-section">
+                    <p class="reset-text text-red-gradient">EXIT</p>
+                    <img class="reset-img" src="../../images/icons/cross.png">
+                </div>
+                </a>
+            </div>
+        </nav>
+
+
+        
+        <div class="details-container">
+            <div class="stars-section">
+                <img class="left-star" src="../../images/icons/star.png">
+                <img class="center-star" src="../../images/icons/star.png">
+                <img class="right-star" src="../../images/icons/star.png">
+            </div>
+
+            <div class="score-details-container">
+                <div class="score-header blue-gradient">
+                    <img class="trophy-img" src="../../images/icons/trophy.png">
+                    <p id="final-score" class="final-score">500</p>
+                    <p class="pts-text">PTS</p>
+                </div>
+                
+                <div class="rating-container">
+                    <p id="rating-text" class="rating-text">JUZKODAI, ANYARE SA’YO?</p>
+                    <img id="rating-bar-img" class="rating-bar-img" src="../../images/quiz-assets/rating-bar/rating-bar2.png">
+                </div>
+            </div>            
+
+        </div>
+
+        <div class="recap-section container">
+            <div class="recap-card">
+                <img class="recap-img" src="../../images/icons/question.png">
+                <p class="quiz-text text-blue-gradient">QUIZ</p>
+                <p class="recap-text text-orange-gradient">RECAP</p>
+                <p class="recap-desc">TIGNAN NATIN PINAGGAGAWA MO SA BUHAY</p>
+        
+            </div>
+
+            <div class="recap-container">
+                <div id="item1" class="item">
+                    <img id="item1-img" class="item-circle" src="../../images/icons/cross.png">
+                    <p id="item1-ans" class="ans-text"></p>
+                </div>
+                <div id="item1" class="item">
+                    <img id="item2-img" class="item-circle" src="../../images/icons/check.png">
+                    <p id="item2-ans" class="ans-text"></p>
+                </div>
+                <div id="item1" class="item">
+                    <img id="item3-img" class="item-circle" src="../../images/icons/check.png">
+                    <p id="item3-ans" class="ans-text"></p>
+                </div>
+                <div id="item1" class="item">
+                    <img id="item4-img" class="item-circle" src="../../images/icons/cross.png">
+                    <p id="item4-ans" class="ans-text"></p>
+                </div>
+                <div id="item1" class="item">
+                    <img id="item5-img" class="item-circle" src="../../images/icons/cross.png">
+                    <p id="item5-ans" class="ans-text"></p>
+                </div>
+
+
+
+            </div>
+
+            <div class="meme-image-section-eval">
+                <div class="meme-image-container-eval">
+                    <img class="meme-image-eval" id="meme-image-eval" src="../../images/quiz-assets/meme-img-easy/1.jpg">
+                </div>
+            </div>
+    </section>
+
+    <script src="./extreme-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,730 @@
+.subheader-container {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials.container .subheader-container {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.testimonials {
+  position: inherit;
+  margin: 0;
+  padding: 0;
+  min-height: 80vh;
+  width: 100%;
+  background: url("image/homepage-bg.png");
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.testimonials-grid {
+  display: flex;
+  justify-content: center; /* center the whole row * /
+  gap: 24px; /* space between cards */
+  flex-wrap: nowrap; /* keeps them on one row */
+  max-width: 100%; /* don't restrict too much */
+
+  padding: 0 1rem;
+}
+/* ---------- Testimonials Section ---------- */
+
+/* ---------- Testimonial Card ---------- */
+.testimonial-card {
+  width: 310px; /* or whatever your intended fixed width is */
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  /* Lean shadow to the right, slightly downward, thin and visible */
+  box-shadow: 15px 20px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+/* Hover “lift” effect */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.3); /* enhanced hover shadow */
+}
+
+/* Top half (image) */
+.testimonial-card__top {
+  height: 170px; /* adjust as needed */
+  overflow: hidden;
+}
+.testimonial-card__top .testimonial-card__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom half (content) */
+.testimonial-card__bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* pushes content down */
+  padding: 80px 16px 30px;
+  text-align: center;
+  position: relative;
+  background: var(--white);
+}
+
+/* Circular portrait overlapping the divider */
+.testimonial-card__circle {
+  position: absolute;
+  top: -60px; /* adjust so it's still centered nicely */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--primary-orange);
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+.testimonial-card__circle img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+}
+
+/* Body text */
+.testimonial-card__body {
+  margin-top: 1px;
+  font-size: 14px;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+.testimonial-card__quotes {
+  color: #000 !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px; /* adjust spacing if necessary */
+  margin-bottom: 3px;
+  margin-top: 3px;
+  position: relative; /* make it easier to control stacking */
+  z-index: 1; /* ensure quotes are on top */
+}
+
+.testimonial-quote {
+  font-size: 48px; /* increased size for better visibility */
+  font-family: Arial, sans-serif;
+
+  line-height: 1;
+  color: #000 !important; /* you can change this to any color you prefer */
+}
+
+.testimonial-quote.left {
+  text-align: left;
+}
+
+.testimonial-quote.right {
+  text-align: right;
+}
+
+.testimonial-card__quotes .testimonial-quote strong {
+  color: #000 !important;
+}
+/* Rating & footer */
+.testimonial-card__rating {
+  margin: 12px 0 4px;
+  font-size: 30px;
+  color: black;
+}
+.testimonial-card__footer {
+  font-size: 20px;
+  color: var(--black);
+  margin-top: 10px; /* add some space above the footer */
+}
+.cta-section {
+  background: linear-gradient(180deg, #2767ee 48%, #12358a 100%);
+  color: white;
+  border-radius: 16px;
+  margin: 35px auto; /* Keeps the container centered */
+  overflow: hidden;
+  max-width: 1350px; /* Lock overall size */
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateX(
+    10px
+  ); /* Shifts the centered section 20px to the right */
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-image {
+  position: relative;
+  flex: 1 2 0;
+  max-width: 800px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cta-image img.bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cta-image img.overlay {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  max-width: 630px; /* never wider than 200px */
+  max-height: 630px; /* never taller than 200px */
+  width: auto; /* default scaling */
+  height: auto;
+  z-index: 2;
+
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.cta-image img.overlay:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.cta-content {
+  margin-top: -3px;
+  flex: 1;
+  text-align: center;
+  margin-left: -50px;
+}
+
+.cta-subtitle {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #11a719 0%, #07410a 100%);
+  padding: 14px 30px;
+  color: #ffffff;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 3px 6px 0 #004d33;
+
+  border: none;
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  display: inline-block; /* needed for smooth text scale */
+  transform-origin: center center;
+}
+
+.cta-button:hover {
+  transform: scale(1.15); /* pops the whole button + text */
+  box-shadow: 8px 12px 10px rgba(0, 77, 51, 0.4);
+}
+
+/* Responsive CTA */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  .cta-image img {
+    max-width: 240px;
+  }
+}
+
+.footer {
+  position: relative;
+  overflow: visible; /* Allows the wave image to show outside the footer */
+  width: 100%;
+  min-height: 300px !important;
+  height: auto;
+  border-top: 1px solid var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 64px;
+  z-index: 0;
+  margin-top: 50px;
+  flex-shrink: 0;
+}
+footer::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: url("./images/Testimonials/footer_bg.png") no-repeat center bottom;
+  background-size: cover;
+  z-index: -1;
+  flex-shrink: 0;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.footer-logo-container p {
+  color: white;
+}
+
+.footer-logo-container img {
+  width: 150px; /* Adjusted logo size */
+  margin-top: 30px;
+  height: auto;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.icon-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  max-height: 200px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  margin-top: 2.3px;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+@media (max-width: 1000px) {
+  .info-links {
+    display: none;
+  }
+}
+
+/* LINKS RIGHT SIDE */
+.links-container li {
+  display: flex;
+  gap: 1rem;
+  flex: 1; /* Allow this section to take up available space */
+  min-width: 200px; /* Minimum width for the links and browse section */
+  align-self: flex-start;
+  text-align: left;
+  margin-right: -50px;
+
+  margin-bottom: -30px; /* Fixed typo: Added 'px' */
+  margin-top: 30px; /* Add margin-top to move it downward */
+}
+
+.browse-links h4 {
+  text-align: right;
+  margin-right: 110px;
+  margin-top: 40px;
+  margin-bottom: -50px;
+}
+
+.info-links h4 {
+  text-align: right;
+  margin-right: 110px;
+  margin-top: 40px;
+  margin-bottom: -50px;
+}
+
+.info-links,
+.browse-links {
+  flex: 1;
+}
+
+.info-links,
+.browse-links:hover {
+  flex: 1;
+}
+
+.links h4 {
+  text-align: right;
+  margin-left: -60px;
+  margin-bottom: -50px;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Optional: remove default ul margin */
+}
+
+.footer-links li {
+  width: 100%;
+  text-align: left;
+}
+
+.foot-link {
+  display: block;
+  text-align: left; /* Ensure the text itself is left-aligned */
+  margin-left: 5px; /* Remove the extra left margin */
+  align-self: flex-start; /* Override the parent's centering */
+  font-size: 1rem;
+  color: var(--white);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.foot-link:hover {
+  color: var(--primary-orange); /* Change text color to orange */
+  text-decoration: underline; /* Optional: Adds an underline effect */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+/* ──────────────── Tablet (≤800px) ──────────────── */
+@media (max-width: 800px) {
+  /* Header & Nav */
+  header,
+  .main-nav {
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .main-nav li {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* Subheader */
+  .subheader-container {
+    margin-bottom: 50px;
+    padding: 0 1rem;
+  }
+
+  /* Testimonials */
+
+  /* If you’re using anchor links and want the section to scroll into view nicely: */
+  .testimonials h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+    /* this makes the font fluid between 2rem and 5rem, scaling with viewport width */
+  }
+  .testimonials-grid {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .testimonial-card {
+    width: calc(50% - 1rem);
+    margin: 0.5rem 0;
+  }
+
+  .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.03);
+  }
+
+  /* CTA Section */
+  .cta-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .cta-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  .cta-image {
+    max-width: 100%;
+  }
+  .cta-button {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.1); /* pop out */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  /* Footer Links */
+  .links-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .links-container li {
+    margin: 0;
+  }
+
+  .info-links {
+    display: block;
+  }
+  .links-container {
+    display: flex;
+    flex-direction: row; /* keep side-by-side */
+    justify-content: space-around; /* spread them evenly */
+    gap: 2rem;
+    margin-bottom: 5px; /* some breathing room */
+  }
+
+  .links-container > div {
+    flex: 1 1 45%; /* each takes about half the width */
+    min-width: 100px;
+    padding-left: 10%; /* never shrink below this */
+  }
+  .info-links h4 {
+    margin-left: 5px; /* adjust this value as needed */
+  }
+  .browse-links h4,
+  .info-links h4 {
+    margin-bottom: 0.1rem; /* you can bump this up or down */
+  }
+
+  .footer-links .foot-link {
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    text-decoration: none;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px; /* adjust spacing under text */
+  }
+
+  .footer-links .foot-link:hover {
+    color: var(--primary-orange);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-orange);
+  }
+}
+/* ──────────────── Mobile (≤400px) ──────────────── */
+@media (max-width: 400px) {
+  /* Header & Logo */
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  header .logo {
+    order: 0;
+    margin-right: 1rem; /* space between logo and the rest */
+  }
+
+  /* Navigation (if applicable) */
+  .main-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .main-nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  /* Subheader */
+  .subheader-container {
+    margin-bottom: 30px;
+  }
+
+  /* Testimonials */
+  .testimonials h1 {
+    margin-top: 50px;
+    font-size: 3rem !important;
+  }
+  .testimonials h3 {
+    margin-top: 2px;
+    font-size: 1.5rem !important;
+  }
+  .testimonials-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .testimonial-card {
+    width: 100%;
+    margin: 0;
+  }
+  .testimonial-card__bottom {
+    padding: 60px 12px 20px;
+  }
+  .testimonial-card__body {
+    font-size: 13px;
+  }
+  .testimonial-card__rating {
+    font-size: 26px;
+  }
+  .testimonial-card__footer {
+    font-size: 18px;
+  }
+
+  /* CTA Section */
+  .cta-button {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  /* Footer Links */
+  .footer {
+    gap: 40px;
+  }
+  .footer-logo-container {
+    margin-top: 40px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Move logo to the left */
+    justify-content: center;
+  }
+  .footer-logo-container img {
+    margin-top: 100;
+    width: 120px; /* Reduced logo size */
+    margin: 0;
+    height: auto;
+  }
+
+  /* --- Footer Tagline --- */
+  .footer-tagline {
+    font-size: 0.7rem;
+    text-align: left;
+    margin-top: 0.5rem;
+    color: var(--white);
+  }
+
+  /* --- Social Links Section --- */
+  .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-self: flex-start; /* Align social links to the left */
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--white);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  /*LINKS*/
+  .links-container {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5px;
+  }
+  .links-container > div {
+    margin-left: -80px;
+    width: 100%;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .info-links h4 {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 0.1rem;
+  }
+
+  .browse-links h4 {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    margin-top: -20px;
+    margin-bottom: 0.5rem;
+  }
+  .foot-link {
+    font-size: 0.5rem;
+    margin-top: -30px;
+    margin-bottom: -50px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    text-decoration: none;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+  }
+  .footer-links .foot-link:hover {
+    color: var(--primary-orange);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-orange);
+  }
+}

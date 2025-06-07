@@ -1,0 +1,252 @@
+/*---------- GLOBAL STYLES ----------*/
+:root {
+    --white: #FFFFFF;
+    --black: #0D0D0D;
+    --primary-blue: #2767EE;
+    --dark-blue: #12358A;
+    --primary-orange: #FEBD16;
+    --dark-orange: #F08D15;
+    --primary-green: #11A720;
+    --dark-green: #0C6915;
+    --primary-red: #DC2525;
+    --dark-red: #991C1C;
+
+    --primary-gray: #D8D8D8;
+    --dark-gray: #757575;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy-Bold', 'Arial', sans-serif;
+    color: var(--white);
+}
+
+body{
+    background-color: var(--white);
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 64px;
+}
+
+a{
+    text-decoration: none !important;
+    color: var(--black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+h1, h1 span{
+    font-size: 128px;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    font-weight: 900;
+}
+
+h2, h2 span{
+    font-size: 72px;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    font-weight: 900;
+    margin-bottom: -16px;
+}
+
+h3{
+    font-size: 32px;
+    font-family: 'Gilroy-Bold', 'Arial', sans-serif;
+    color: var(--black);
+    font-weight: 400;
+}
+
+h4, h4 span {
+    font-size: 28px;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    color: white;
+    font-weight: 900;
+    margin-bottom: -16px;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Gilroy-Regular', sans-serif;
+    color: var(--black);
+    font-weight: 300;
+}
+
+
+.subheader-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/*------ Gradient Styles
+You can copy this in your own css if you want other angles (90deg or horizontal gradient...)
+*/
+
+.blue-gradient {
+    background: linear-gradient(
+        0deg, var(--dark-blue) 0%, var(--primary-blue) 100%
+    );
+}
+
+.text-blue-gradient {
+    background: linear-gradient(0deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.orange-gradient {
+    background: linear-gradient(
+        0deg, var(--dark-orange) 0%, var(--primary-orange) 100%
+    );
+}
+
+.text-orange-gradient {
+    background: linear-gradient(0deg, var(--dark-orange) 0%, var(--primary-orange) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.green-gradient {
+    background: linear-gradient(
+        0deg, var(--dark-green) 0%, var(--primary-green) 100%
+    );
+}
+
+.text-green-gradient {
+    background: linear-gradient(0deg, var(--dark-green) 0%, var(--primary-green) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.red-gradient {
+    background: linear-gradient(
+        0deg, var(--dark-red) 0%, var(--primary-red) 100%
+    );
+}
+
+.text-red-gradient {
+    background: linear-gradient(0deg, var(--dark-red) 0%, var(--primary-red) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/*------ Media Query for 800px*/
+
+@media (max-width: 800px) {
+    
+    h1, h1 span{
+        font-size: 128px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        font-weight: 900;
+    }
+
+    h2, h2 span{
+        font-size: 64px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        font-weight: 900;
+        margin-bottom: -8px;
+    }
+
+    h3{
+        font-size: 28px;
+        font-family: 'Gilroy-Bold', 'Arial', sans-serif;
+        color: var(--black);
+        font-weight: 400;
+    }
+
+    h4, h4 span {
+        font-size: 22px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        color: white;
+        font-weight: 900;
+        margin-bottom: -8px;
+    }
+
+    p{
+        font-size: 14px;
+        font-family: 'Gilroy-Regular', sans-serif;
+        color: var(--black);
+        font-weight: 300;
+    }
+
+    .container {
+        padding: 32px;
+    }
+
+}
+
+
+/*------ MEDIA QUERY FOR 400px */
+
+@media (max-width: 400px) {
+    
+    h1, h1 span{
+        font-size: 128px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        font-weight: 900;
+    }
+    
+    h2, h2 span{
+        font-size: 42px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        font-weight: 900;
+        margin-bottom: -4px;
+    }
+    
+    h3{
+        font-size: 24px;
+        font-family: 'Gilroy-Bold', 'Arial', sans-serif;
+        color: var(--black);
+        font-weight: 400;
+    }
+    
+    h4, h4 span {
+        font-size: 18px;
+        font-family: 'Rubik', 'Arial', sans-serif;
+        color: white;
+        font-weight: 900;
+        margin-bottom: -4px;
+    }
+    
+    p{
+        font-size: 12px;
+        font-family: 'Gilroy-Regular', sans-serif;
+        color: var(--black);
+        font-weight: 300;
+    }
+
+    .container {
+        padding: 0;
+    }
+    
+}
+    
+
